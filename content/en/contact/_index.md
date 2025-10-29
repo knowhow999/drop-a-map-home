@@ -12,6 +12,4 @@ please reach out using the form below.
   <p><button type="submit">Send</button></p>
 </form>
 
----
 
-Or email us directly at [knowhow999@gmail.com](mailto:knowhow999@gmail.com)
