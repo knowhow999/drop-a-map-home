@@ -19,26 +19,9 @@ defaultContentLanguageInSubdir = true
 # 언어별 설정
 [languages]
 
-  [languages.ko]
-    languageName = "한국어"
-    weight = 1
-    contentDir = "content/ko"
-    title = "드롭-어-맵 — 나만의 지도를 만들고, 쉽게 오려 붙이세요"
-    [languages.ko.params]
-      description = "Adobe Express에서 지도를 손쉽게 만들 수 있는 Drop-a-Map 애드온"
-    [languages.ko.menu]
-      [[languages.ko.menu.main]]
-        name = "소개"
-        url = "/ko/about/"
-        weight = 1
-      [[languages.ko.menu.main]]
-        name = "문의"
-        url = "/ko/contact/"
-        weight = 2
-
   [languages.en]
     languageName = "English"
-    weight = 2
+    weight = 1
     contentDir = "content/en"
     title = "Drop-a-Map — Cut & paste custom maps instantly!"
     [languages.en.params]
@@ -51,6 +34,23 @@ defaultContentLanguageInSubdir = true
       [[languages.en.menu.main]]
         name = "Contact"
         url = "/en/contact/"
+        weight = 2
+
+  [languages.ko]
+    languageName = "한국어"
+    weight = 2
+    contentDir = "content/ko"
+    title = "드롭-어-맵 — 나만의 지도를 만들고, 쉽게 오려 붙이세요"
+    [languages.ko.params]
+      description = "Adobe Express에서 지도를 손쉽게 만들 수 있는 Drop-a-Map 애드온"
+    [languages.ko.menu]
+      [[languages.ko.menu.main]]
+        name = "소개"
+        url = "/ko/about/"
+        weight = 1
+      [[languages.ko.menu.main]]
+        name = "문의"
+        url = "/ko/contact/"
         weight = 2
 
 
