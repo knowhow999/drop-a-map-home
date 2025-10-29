@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ko" dir="auto" data-theme="auto">
+
+<head>
+	<meta name="generator" content="Hugo 0.152.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>드롭-어-맵 — 나만의 지도를 만들고, 쉽게 오려 붙이세요</title>
+
+<meta name="description" content="Adobe Express에서 지도를 손쉽게 만들 수 있는 Drop-a-Map 애드온">
+<meta name="author" content="Bosco Han">
+<link rel="canonical" href="//localhost:1313/ko/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.343cc480b9ffc8f04ccbe5e968ad674880cab773ec19905e93033065c1e7a804.css" integrity="sha256-NDzEgLn/yPBMy&#43;XpaK1nSIDKt3PsGZBekwMwZcHnqAQ=" rel="preload stylesheet" as="style">
+<link rel="icon" href="//localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="//localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="//localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="//localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="//localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="//localhost:1313/ko/index.xml" title="rss">
+<link rel="alternate" hreflang="ko" href="//localhost:1313/ko/">
+<link rel="alternate" hreflang="en" href="//localhost:1313/en/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body class="list" id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="//localhost:1313/ko/" accesskey="h" title="드롭-어-맵 — 나만의 지도를 만들고, 쉽게 오려 붙이세요 (Alt + H)">드롭-어-맵 — 나만의 지도를 만들고, 쉽게 오려 붙이세요</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                    <ul class="lang-switch"><li>|</li>
+                        <li>
+                            <a href="//localhost:1313/en/" title="English"
+                                aria-label="English">En</a>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="//localhost:1313/ko/about/" title="소개">
+                    <span>소개</span>
+                </a>
+            </li>
+            <li>
+                <a href="//localhost:1313/ko/contact/" title="문의">
+                    <span>문의</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+<style>
+.content-body {
+  font-size: 1.05rem;
+  line-height: 1.75;
+   
+}
+
+ 
+.content-body p {
+  margin-bottom: 1.2em;
+}
+
+ 
+.content-body h2, 
+.content-body h3, 
+.content-body h4 {
+  margin-top: 1.6em;
+  margin-bottom: 0.6em;
+}
+
+ 
+.content-body ul, 
+.content-body ol {
+  margin: 0 0 1.2em 1.5em;
+  line-height: 1.6;
+}
+
+ 
+.content-body blockquote {
+  border-left: 4px solid #ddd;
+  padding-left: 12px;
+   margin: 1.4em 0;
+}
+</style>
+<main style="max-width:960px;margin:40px auto;padding:0 16px;">
+  <header style="text-align:center;margin-bottom:28px;">
+    <h1 style="margin:0 0 6px 0;">Drop-a-Map add-on</h1>
+    <p style="color:#666;">for Adobe Express</p>
+  </header>
+
+<section style="margin-bottom:24px;">
+  <article class="content-body">
+    <h2 id="주소를-입력하고-나만의-지도를-만들어-보세요">주소를 입력하고 나만의 지도를 만들어 보세요</h2>
+<h4 id="drop-a-map은-adobe-express에서-바로-사용할-수-있는-지도-생성-애드온입니다"><strong>Drop-a-Map</strong>은 Adobe Express에서 바로 사용할 수 있는 지도 생성 애드온입니다.</h4>
+<p>주소를 입력하면 자동으로 지도가 표시되고, 다양한 <strong>스타일·비율·마커 색상</strong>을 선택하여 이미지를 바로 다운로드할 수 있습니다.</p>
+<p>🗺️ 간단한 포스터, 썸네일, 여행 일정, 이벤트 초대장 등<br>
+다양한 디자인 속에 지도를 삽입해 보세요.</p>
+<h3 id="주요-기능">주요 기능</h3>
+<ul>
+<li>주소나 장소 이름으로 빠른 지도 생성</li>
+<li>정사각형, 세로형, 가로형 등 다양한 이미지 비율</li>
+<li>마커 표시 여부 및 색상 선택</li>
+<li>미리보기 후 즉시 다운로드</li>
+</ul>
+
+  </article>
+</section>
+
+<section>
+  <h3 style="margin:0 0 12px 0;">Screenshots</h3>
+
+  <div style="
+      display:flex;
+      gap:12px;
+      overflow-x:auto;
+      scroll-snap-type:x mandatory;
+      padding-bottom:12px;
+  ">
+    
+      <figure style="
+          flex:0 0 auto;
+          width:180px;
+          scroll-snap-align:center;
+          margin:0;
+      ">
+        <img src="/images/screenshots/screen1.png"
+             alt="Drop-a-Map screenshot 1"
+             style="width:100%;
+                    height:120px;
+                    object-fit:cover;
+                    border-radius:8px;
+                    box-shadow:0 2px 8px rgba(0,0,0,.1);
+                    transition:transform .2s;"
+             onmouseover="this.style.transform='scale(1.05)'"
+             onmouseout="this.style.transform='scale(1)'"
+             loading="lazy">
+      </figure>
+    
+      <figure style="
+          flex:0 0 auto;
+          width:180px;
+          scroll-snap-align:center;
+          margin:0;
+      ">
+        <img src="/images/screenshots/screen2.png"
+             alt="Drop-a-Map screenshot 2"
+             style="width:100%;
+                    height:120px;
+                    object-fit:cover;
+                    border-radius:8px;
+                    box-shadow:0 2px 8px rgba(0,0,0,.1);
+                    transition:transform .2s;"
+             onmouseover="this.style.transform='scale(1.05)'"
+             onmouseout="this.style.transform='scale(1)'"
+             loading="lazy">
+      </figure>
+    
+      <figure style="
+          flex:0 0 auto;
+          width:180px;
+          scroll-snap-align:center;
+          margin:0;
+      ">
+        <img src="/images/screenshots/screen3.png"
+             alt="Drop-a-Map screenshot 3"
+             style="width:100%;
+                    height:120px;
+                    object-fit:cover;
+                    border-radius:8px;
+                    box-shadow:0 2px 8px rgba(0,0,0,.1);
+                    transition:transform .2s;"
+             onmouseover="this.style.transform='scale(1.05)'"
+             onmouseout="this.style.transform='scale(1)'"
+             loading="lazy">
+      </figure>
+    
+      <figure style="
+          flex:0 0 auto;
+          width:180px;
+          scroll-snap-align:center;
+          margin:0;
+      ">
+        <img src="/images/screenshots/screen4.png"
+             alt="Drop-a-Map screenshot 4"
+             style="width:100%;
+                    height:120px;
+                    object-fit:cover;
+                    border-radius:8px;
+                    box-shadow:0 2px 8px rgba(0,0,0,.1);
+                    transition:transform .2s;"
+             onmouseover="this.style.transform='scale(1.05)'"
+             onmouseout="this.style.transform='scale(1)'"
+             loading="lazy">
+      </figure>
+    
+      <figure style="
+          flex:0 0 auto;
+          width:180px;
+          scroll-snap-align:center;
+          margin:0;
+      ">
+        <img src="/images/screenshots/screen5.png"
+             alt="Drop-a-Map screenshot 5"
+             style="width:100%;
+                    height:120px;
+                    object-fit:cover;
+                    border-radius:8px;
+                    box-shadow:0 2px 8px rgba(0,0,0,.1);
+                    transition:transform .2s;"
+             onmouseover="this.style.transform='scale(1.05)'"
+             onmouseout="this.style.transform='scale(1)'"
+             loading="lazy">
+      </figure>
+    
+  </div>
+
+  <p style="font-size:0.9em;color:#777;margin-top:8px;text-align:center;">
+    Swipe or scroll horizontally to see all screenshots →
+  </p>
+</section>
+
+  <section style="margin-top:28px;text-align:center;">
+    <a href="https://new.express.adobe.com/add-ons" target="_blank" rel="noopener"
+       style="display:inline-block;padding:12px 20px;border-radius:10px;background:#111;color:#fff;text-decoration:none;">
+      View on Adobe Express Marketplace
+    </a>
+  </section>
+</main>
+
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="//localhost:1313/ko/">드롭-어-맵 — 나만의 지도를 만들고, 쉽게 오려 붙이세요</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

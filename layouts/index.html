@@ -1,0 +1,92 @@
+{{ define "main" }}
+<style>
+.content-body {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  /* color: inherit;  // 굳이 지정하려면 이렇게 */
+}
+
+/* 문단 간격 */
+.content-body p {
+  margin-bottom: 1.2em;
+}
+
+/* 제목 간격 */
+.content-body h2, 
+.content-body h3, 
+.content-body h4 {
+  margin-top: 1.6em;
+  margin-bottom: 0.6em;
+}
+
+/* 리스트 간격 */
+.content-body ul, 
+.content-body ol {
+  margin: 0 0 1.2em 1.5em;
+  line-height: 1.6;
+}
+
+/* 인용문 */
+.content-body blockquote {
+  border-left: 4px solid #ddd;
+  padding-left: 12px;
+/* color: inherit;  // 굳이 지정하려면 이렇게 */  margin: 1.4em 0;
+}
+</style>
+<main style="max-width:960px;margin:40px auto;padding:0 16px;">
+  <header style="text-align:center;margin-bottom:28px;">
+    <h1 style="margin:0 0 6px 0;">Drop-a-Map add-on</h1>
+    <p style="color:#666;">for Adobe Express</p>
+  </header>
+
+<section style="margin-bottom:24px;">
+  <article class="content-body">
+    {{ .Content | safeHTML }}
+  </article>
+</section>
+
+<section>
+  <h3 style="margin:0 0 12px 0;">Screenshots</h3>
+
+  <div style="
+      display:flex;
+      gap:12px;
+      overflow-x:auto;
+      scroll-snap-type:x mandatory;
+      padding-bottom:12px;
+  ">
+    {{ range (slice 1 2 3 4 5) }}
+      <figure style="
+          flex:0 0 auto;
+          width:180px;
+          scroll-snap-align:center;
+          margin:0;
+      ">
+        <img src="/images/screenshots/screen{{ . }}.png"
+             alt="Drop-a-Map screenshot {{ . }}"
+             style="width:100%;
+                    height:120px;
+                    object-fit:cover;
+                    border-radius:8px;
+                    box-shadow:0 2px 8px rgba(0,0,0,.1);
+                    transition:transform .2s;"
+             onmouseover="this.style.transform='scale(1.05)'"
+             onmouseout="this.style.transform='scale(1)'"
+             loading="lazy">
+      </figure>
+    {{ end }}
+  </div>
+
+  <p style="font-size:0.9em;color:#777;margin-top:8px;text-align:center;">
+    Swipe or scroll horizontally to see all screenshots →
+  </p>
+</section>
+
+  <section style="margin-top:28px;text-align:center;">
+    <a href="https://new.express.adobe.com/add-ons" target="_blank" rel="noopener"
+       style="display:inline-block;padding:12px 20px;border-radius:10px;background:#111;color:#fff;text-decoration:none;">
+      View on Adobe Express Marketplace
+    </a>
+  </section>
+</main>
+{{ end }}
