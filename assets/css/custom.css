@@ -2,7 +2,8 @@
    Drop-a-Map — PaperMod 전용 커스텀 스타일 (최종판)
    - 라이트/다크 완전 대응
    - 본문 색/불투명도 강제 보정
-   - 스크린샷 슬라이더 포함
+   - 스크린샷 슬라이더
+   - Netlify Form 가시화 + 기본 스타일
    ========================================================= */
 
 /* ========== 브랜드 / 컬러 변수 ========== */
@@ -17,6 +18,9 @@
   --text-strong-dark:#fff;   /* 다크 제목/강조 */
   --muted-dark:#B5B5B5;
   --bg-dark:#0E0E0E;
+
+  --border:#E5E7EB;          /* 입력창 테두리 */
+  --border-dark:#2A2A2A;
 }
 
 /* ========== 기본 타이포그래피 ========== */
@@ -79,6 +83,77 @@ h4{font-size:1.1rem;margin:1.2em 0 .4em;}
 }
 .footer-button:hover{background:var(--brand-blue);color:#fff;}
 
+/* ========== Netlify Forms: 가시화 + 기본 스타일 ========== */
+/* 폼 요소가 테마 스타일에 의해 숨겨지지 않도록 강제 표시 */
+form input,
+form textarea,
+form button,
+form select {
+  display:block !important;
+  visibility:visible !important;
+}
+
+/* 기본 폼 스타일 */
+.content-body form{margin:1.25rem 0;}
+.content-body form p{margin:0 0 1rem 0;}
+
+.content-body form label{
+  font-weight:600;
+  color:var(--text);
+  display:block;
+  margin:0 0 .35rem 0;
+}
+
+.content-body form input[type="text"],
+.content-body form input[type="email"],
+.content-body form input[type="url"],
+.content-body form input[type="search"],
+.content-body form input[type="tel"],
+.content-body form select,
+.content-body form textarea{
+  width:100%;
+  padding:.75rem .85rem;
+  border:1px solid var(--border);
+  border-radius:.6rem;
+  background:#fff;
+  color:#111;
+  outline:none;
+  transition:border-color .15s, box-shadow .15s, background .15s;
+  box-shadow:0 0 0 0 rgba(20,115,230,0);
+}
+
+.content-body form textarea{min-height:160px;resize:vertical;}
+
+.content-body form input:focus,
+.content-body form textarea:focus,
+.content-body form select:focus{
+  border-color:var(--brand-blue);
+  box-shadow:0 0 0 3px rgba(20,115,230,.15);
+}
+
+.content-body form button[type="submit"],
+.content-body form .button{
+  appearance:none;
+  border:0;
+  background:var(--brand-blue);
+  color:#fff;
+  font-weight:700;
+  padding:.8rem 1.1rem;
+  border-radius:.6rem;
+  cursor:pointer;
+  transition:transform .06s ease, filter .15s ease;
+}
+.content-body form button[type="submit"]:hover{filter:brightness(1.05);}
+.content-body form button[type="submit"]:active{transform:translateY(1px);}
+
+/* Netlify honeypot 필드 숨김 */
+form [name="bot-field"]{display:none !important;}
+
+/* 성공/에러 메시지(선택) */
+.form-note{font-size:.95rem;color:var(--muted);margin-top:.5rem;}
+.form-error{color:#D14343;}
+.form-success{color:#0A7F3F;}
+
 /* ========== 반응형 ========== */
 @media (max-width:768px){
   h1{font-size:1.6rem;}
@@ -88,8 +163,7 @@ h4{font-size:1.1rem;margin:1.2em 0 .4em;}
 }
 
 /* =========================================================
-   다크모드 — PaperMod의 body.dark / html.dark / [data-theme="dark"] 대응
-   본문 희미함 방지(색상 + opacity + -webkit-text-fill-color)
+   다크모드 — PaperMod body.dark / html.dark / [data-theme="dark"]
    ========================================================= */
 @media (prefers-color-scheme:dark){
   /* 배경/기본 텍스트 */
@@ -135,6 +209,19 @@ h4{font-size:1.1rem;margin:1.2em 0 .4em;}
   .screenshot-slider img{box-shadow:0 2px 8px rgba(255,255,255,.08);}
   .footer-button{background:#EAEAEA;color:#111;}
   .footer-button:hover{background:#79C0FF;color:#111;}
+
+  /* 폼 다크 모드 */
+  .content-body form input[type="text"],
+  .content-body form input[type="email"],
+  .content-body form input[type="url"],
+  .content-body form input[type="search"],
+  .content-body form input[type="tel"],
+  .content-body form select,
+  .content-body form textarea{
+    background:#121212;
+    color:var(--text-dark);
+    border-color:var(--border-dark);
+  }
 }
 
 /* =========================================================
