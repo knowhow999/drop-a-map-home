@@ -1,0 +1,78 @@
+<style>
+  /* ===== Contact form visibility hard-fix (PaperMod override) ===== */
+  .post-content form label{
+    display:block;
+    font-weight:700;
+    margin:14px 0 6px;
+    color:#111 !important;
+  }
+
+  .post-content form input[type="text"],
+  .post-content form input[type="email"],
+  .post-content form input[type="url"],
+  .post-content form input[type="tel"],
+  .post-content form textarea{
+    display:block;
+    width:100%;
+    max-width:680px;
+    padding:12px 14px;
+    margin:4px 0 16px;
+    border:1px solid rgba(0,0,0,.28) !important;
+    border-radius:10px !important;
+    background:#ffffff !important;
+    color:#111111 !important;
+    font-size:1rem;
+    line-height:1.5;
+    box-shadow:0 1px 3px rgba(0,0,0,.08) !important;
+    -webkit-text-fill-color:#111111 !important; /* Safari 대비 */
+  }
+
+  .post-content form input:focus,
+  .post-content form textarea:focus{
+    outline:none !important;
+    border-color:#1473E6 !important;
+    box-shadow:0 0 0 3px rgba(20,115,230,.2) !important;
+    background:#fdfdfd !important;
+  }
+
+  .post-content form textarea{ min-height:160px; resize:vertical; }
+
+  .post-content form button[type="submit"]{
+    background:#1473E6 !important;
+    color:#fff !important;
+    border:none !important;
+    border-radius:10px !important;
+    padding:12px 20px !important;
+    font-size:1rem !important;
+    cursor:pointer;
+    transition:background .2s ease;
+  }
+  .post-content form button[type="submit"]:hover{
+    background:#0F5EC0 !important;
+  }
+
+  /* ===== Dark mode ===== */
+  html.dark .post-content form input[type="text"],
+  html.dark .post-content form input[type="email"],
+  html.dark .post-content form input[type="url"],
+  html.dark .post-content form input[type="tel"],
+  html.dark .post-content form textarea{
+    background:#1a1a1a !important;
+    color:#eaeaea !important;
+    border:1px solid rgba(255,255,255,.32) !important;
+    -webkit-text-fill-color:#eaeaea !important;
+    box-shadow:0 1px 2px rgba(255,255,255,.05) inset !important;
+  }
+  html.dark .post-content form input:focus,
+  html.dark .post-content form textarea:focus{
+    border-color:#79C0FF !important;
+    box-shadow:0 0 0 3px rgba(121,192,255,.22) !important;
+    background:#222 !important;
+  }
+  html.dark .post-content form button[type="submit"]{
+    background:#79C0FF !important; color:#111 !important;
+  }
+  html.dark .post-content form button[type="submit"]:hover{
+    background:#A1D1FF !important;
+  }
+</style>
