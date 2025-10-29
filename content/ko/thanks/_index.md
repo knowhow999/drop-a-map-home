@@ -1,5 +1,5 @@
 ---
-title: "Thanks"
+title: "감사합니다"
 ---
 
-Your message has been sent. We'll get back to you soon.
+메시지가 전송되었습니다. 곧 연락드리겠습니다.
