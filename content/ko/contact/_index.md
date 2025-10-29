@@ -2,8 +2,7 @@
 title: "문의사항 & 기술지원"
 ---
 
-If you have any questions, feedback, or partnership ideas,  
-please reach out using the form below.
+질문이나 오류 보고, 또는 제휴에 관한 문의가 있으면 연락주세요.
 
 <form name="contact" method="POST" data-netlify="true">
   <p><label>이름: <input type="text" name="name" required></label></p>
