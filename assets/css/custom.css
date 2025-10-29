@@ -83,196 +83,83 @@ h4{font-size:1.1rem;margin:1.2em 0 .4em;}
 }
 .footer-button:hover{background:var(--brand-blue);color:#fff;}
 
-/* ========== Netlify Forms: 가시화 + 기본 스타일 ========== */
-/* 폼 요소가 테마 스타일에 의해 숨겨지지 않도록 강제 표시 */
-form input,
-form textarea,
-form button,
-form select {
-  display:block !important;
-  visibility:visible !important;
-}
-
-/* 기본 폼 스타일 */
-.content-body form{margin:1.25rem 0;}
-.content-body form p{margin:0 0 1rem 0;}
-
-.content-body form label{
-  font-weight:600;
-  color:var(--text);
-  display:block;
-  margin:0 0 .35rem 0;
-}
-
-.content-body form input[type="text"],
-.content-body form input[type="email"],
-.content-body form input[type="url"],
-.content-body form input[type="search"],
-.content-body form input[type="tel"],
-.content-body form select,
-.content-body form textarea{
-  width:100%;
-  padding:.75rem .85rem;
-  border:1px solid var(--border);
-  border-radius:.6rem;
-  background:#fff;
-  color:#111;
-  outline:none;
-  transition:border-color .15s, box-shadow .15s, background .15s;
-  box-shadow:0 0 0 0 rgba(20,115,230,0);
-}
-
-.content-body form textarea{min-height:160px;resize:vertical;}
-
-.content-body form input:focus,
-.content-body form textarea:focus,
-.content-body form select:focus{
-  border-color:var(--brand-blue);
-  box-shadow:0 0 0 3px rgba(20,115,230,.15);
-}
-
-.content-body form button[type="submit"],
-.content-body form .button{
-  appearance:none;
-  border:0;
-  background:var(--brand-blue);
-  color:#fff;
-  font-weight:700;
-  padding:.8rem 1.1rem;
-  border-radius:.6rem;
-  cursor:pointer;
-  transition:transform .06s ease, filter .15s ease;
-}
-.content-body form button[type="submit"]:hover{filter:brightness(1.05);}
-.content-body form button[type="submit"]:active{transform:translateY(1px);}
-
-/* Netlify honeypot 필드 숨김 */
-form [name="bot-field"]{display:none !important;}
-
-/* 성공/에러 메시지(선택) */
-.form-note{font-size:.95rem;color:var(--muted);margin-top:.5rem;}
-.form-error{color:#D14343;}
-.form-success{color:#0A7F3F;}
-
-/* ========== 반응형 ========== */
-@media (max-width:768px){
-  h1{font-size:1.6rem;}
-  h2{font-size:1.4rem;}
-  .screenshot-slider figure{width:140px;}
-  .screenshot-slider img{height:100px;}
-}
-
-/* =========================================================
-   다크모드 — PaperMod body.dark / html.dark / [data-theme="dark"]
-   ========================================================= */
-@media (prefers-color-scheme:dark){
-  /* 배경/기본 텍스트 */
-  html.dark body, body.dark, [data-theme="dark"] body{
-    background:var(--bg-dark)!important;
-    color:var(--text-dark)!important;
-  }
-
-  /* 본문 컨테이너 */
-  html.dark .content-body, body.dark .content-body, [data-theme="dark"] .content-body{
-    color:var(--text-dark)!important;
-  }
-
-  /* 문단/리스트 — 핵심 보정 */
-  html.dark .content-body p,
-  html.dark .content-body li,
-  body.dark .content-body p,
-  body.dark .content-body li,
-  [data-theme="dark"] .content-body p,
-  [data-theme="dark"] .content-body li{
-    color:var(--text-dark)!important;
-    opacity:1!important;
-    -webkit-text-fill-color:var(--text-dark)!important; /* Safari */
-  }
-
-  /* 제목/강조 */
-  html.dark h1,html.dark h2,html.dark h3,html.dark h4,
-  body.dark h1,body.dark h2,body.dark h3,body.dark h4,
-  [data-theme="dark"] h1,[data-theme="dark"] h2,[data-theme="dark"] h3,[data-theme="dark"] h4{
-    color:var(--text-strong-dark)!important;
-  }
-  html.dark .content-body strong, body.dark .content-body strong, [data-theme="dark"] .content-body strong{
-    color:var(--text-strong-dark)!important; opacity:1!important;
-  }
-
-  /* 링크/인용문/그림자 */
-  html.dark .content-body a, body.dark .content-body a, [data-theme="dark"] .content-body a{
-    color:#79C0FF!important; border-bottom-color:rgba(121,192,255,.5)!important; opacity:1!important;
-  }
-  html.dark .content-body blockquote, body.dark .content-body blockquote, [data-theme="dark"] .content-body blockquote{
-    border-left-color:#444!important; color:#AAA!important;
-  }
-  .screenshot-slider img{box-shadow:0 2px 8px rgba(255,255,255,.08);}
-  .footer-button{background:#EAEAEA;color:#111;}
-  .footer-button:hover{background:#79C0FF;color:#111;}
-
-  /* 폼 다크 모드 */
-  .content-body form input[type="text"],
-  .content-body form input[type="email"],
-  .content-body form input[type="url"],
-  .content-body form input[type="search"],
-  .content-body form input[type="tel"],
-  .content-body form select,
-  .content-body form textarea{
-    background:#121212;
-    color:var(--text-dark);
-    border-color:var(--border-dark);
-  }
-}
-
-/* =========================================================
-   최후 보정(특정 요소가 여전히 연하면 아래 주석 해제)
-   ========================================================= */
-/*
-@media (prefers-color-scheme:dark){
-  html.dark .content-body *, body.dark .content-body *, [data-theme="dark"] .content-body *{
-    color:var(--text-dark)!important; opacity:1!important;
-    -webkit-text-fill-color:var(--text-dark)!important;
-  }
-}
-*/
-
-/* === Forms (PaperMod 가시성 보정) === */
+/* === Netlify Contact Form — Color / Visibility Fix === */
 .post-content form input[type="text"],
 .post-content form input[type="email"],
+.post-content form input[type="url"],
+.post-content form input[type="tel"],
 .post-content form textarea {
   width: 100%;
+  max-width: 640px;
   padding: 12px 14px;
-  margin-top: 6px;
-  border: 1px solid rgba(0,0,0,.2);
+  margin: 10px 0 18px;
+  border: 1px solid rgba(0,0,0,0.25);
   border-radius: 10px;
-  background: #fff;
-  color: #111;
-  box-sizing: border-box;
+  background-color: #ffffff;   /* 밝은 배경 */
+  color: #111111;              /* 글자색 선명하게 */
+  font-size: 1rem;
+  line-height: 1.5;
+  box-shadow: 0 1px 3px rgba(0,0,0,.08);
+  transition: all .2s ease;
 }
 
-.post-content form textarea { min-height: 140px; resize: vertical; }
+.post-content form input:focus,
+.post-content form textarea:focus {
+  outline: none;
+  border-color: #1473E6;                 /* Adobe Express Blue */
+  box-shadow: 0 0 0 3px rgba(20,115,230,.2);
+  background-color: #fdfdfd;
+}
 
-.post-content form button[type="submit"] {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 18px;
-  border: 0;
-  border-radius: 10px;
-  background: var(--brand-blue, #1473E6);
-  color: #fff;
+.post-content form textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+
+/* Label */
+.post-content form label {
   font-weight: 600;
-  cursor: pointer;
+  color: #111;
 }
-.post-content form button[type="submit"]:hover { filter: brightness(0.95); }
 
-/* 다크 모드 */
-@media (prefers-color-scheme: dark) {
-  .post-content form input[type="text"],
-  .post-content form input[type="email"],
-  .post-content form textarea {
-    background: #111;
-    color: #eee;
-    border-color: rgba(255,255,255,.25);
-  }
+/* Button */
+.post-content form button[type="submit"] {
+  background: #1473E6;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background .2s ease;
 }
+.post-content form button[type="submit"]:hover {
+  background: #0F5EC0;
+}
+
+/* === 다크모드 === */
+html.dark .post-content form input[type="text"],
+html.dark .post-content form input[type="email"],
+html.dark .post-content form textarea {
+  background-color: #1a1a1a;
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #eaeaea;
+  box-shadow: 0 1px 2px rgba(255,255,255,.05) inset;
+}
+
+html.dark .post-content form input:focus,
+html.dark .post-content form textarea:focus {
+  border-color: #79C0FF;
+  box-shadow: 0 0 0 3px rgba(121,192,255,.2);
+  background-color: #222;
+}
+
+html.dark .post-content form button[type="submit"] {
+  background: #79C0FF;
+  color: #111;
+}
+html.dark .post-content form button[type="submit"]:hover {
+  background: #A1D1FF;
+}
+
 
