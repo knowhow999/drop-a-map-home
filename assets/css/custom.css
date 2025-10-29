@@ -235,3 +235,44 @@ form [name="bot-field"]{display:none !important;}
   }
 }
 */
+
+/* === Forms (PaperMod 가시성 보정) === */
+.post-content form input[type="text"],
+.post-content form input[type="email"],
+.post-content form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-top: 6px;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: 10px;
+  background: #fff;
+  color: #111;
+  box-sizing: border-box;
+}
+
+.post-content form textarea { min-height: 140px; resize: vertical; }
+
+.post-content form button[type="submit"] {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 18px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--brand-blue, #1473E6);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+.post-content form button[type="submit"]:hover { filter: brightness(0.95); }
+
+/* 다크 모드 */
+@media (prefers-color-scheme: dark) {
+  .post-content form input[type="text"],
+  .post-content form input[type="email"],
+  .post-content form textarea {
+    background: #111;
+    color: #eee;
+    border-color: rgba(255,255,255,.25);
+  }
+}
+
