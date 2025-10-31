@@ -17,4 +17,4 @@ title: "About"
 
 개인정보는 문의 처리 완료 후 즉시 삭제되며, 제3자에게 제공되지 않습니다.
 Drop-a-Map 애드온 사용 과정에서는 어떠한 개인정보도 수집되지 않습니다.
-문의 또는 개인정보 관련 요청은 [[seikimatsu.lab@gmail.com](mailto:seikimatsu.lab@gmail.com)](https://drop-a-map.netlify.app/kr/contact/) 으로 연락 주시기 바랍니다.
+문의 또는 개인정보 관련 요청은 [문의 게시판](https://drop-a-map.netlify.app/kr/contact/) 으로 연락 주시기 바랍니다.
